@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "babel"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
+  }
+}
