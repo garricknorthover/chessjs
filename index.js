@@ -1,10 +1,10 @@
 const pieces = {
-    pawn: 'pawn',
-    knight: 'knight',
-    bishop: 'bishop',
-    queen: 'queen',
-    king: 'king',
-    rook: 'rook',
+    pawn: (a,b) => board[a + 1][b] == 'empty' ? 'can move' : 'cannot',
+    knight: () => 'knightFun',
+    bishop: () => 'bishopFun',
+    queen: () => 'Queen function',
+    king: () => 'kingFun',
+    rook: () => 'rookFun',
     x: 'empty'
 }
 const { pawn, knight, bishop, queen, king, rook, x } =  pieces 
@@ -19,6 +19,8 @@ const board = [
     [pawn, pawn, pawn, pawn, pawn, pawn, pawn, pawn],
     [rook, knight, bishop, queen, king, bishop, knight, rook],]
 
-const possible_moves = (a, b) => [[2, 2], [3, 2]]
+const possible_moves = (a, b) => board[a][b](a,b)
+
+possible_moves(1,6)//?
 
 export {possible_moves}
