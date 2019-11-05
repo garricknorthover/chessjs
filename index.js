@@ -8,8 +8,10 @@ const moves = {
     left: 'left',
     right: 'right',
 }
+const { diagonalLeft, diagonalRight, backDiagonalLeft, backDiagonalRight, up, back, left, right } = moves
+
 const pieces = {
-    pawn: (a,b) => board[a + 1][b] == 'empty' ? 'can move' : 'cannot',
+    pawn: (a, b) => board[a + 1][b] == 'empty' ? 'can move' : 'cannot',
     knight: () => 'knightFun',
     bishop: () => 'bishopFun',
     queen: () => 'Queen function',
@@ -17,7 +19,7 @@ const pieces = {
     rook: () => 'rookFun',
     x: 'empty'
 }
-const { pawn, knight, bishop, queen, king, rook, x } =  pieces 
+const { pawn, knight, bishop, queen, king, rook, x } = pieces
 
 const board = [
     [rook, knight, bishop, queen, king, bishop, knight, rook],
@@ -29,8 +31,8 @@ const board = [
     [pawn, pawn, pawn, pawn, pawn, pawn, pawn, pawn],
     [rook, knight, bishop, queen, king, bishop, knight, rook],]
 
-const possible_moves = (a, b) => board[a][b](a,b)
+const possible_moves = (a, b) => board[a][b](a, b)
 
-possible_moves(1,6)//?
+possible_moves(1, 6)//?
 
-export {possible_moves}
+export { possible_moves }
