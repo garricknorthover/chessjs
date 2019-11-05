@@ -1,3 +1,13 @@
+const moves = {
+    diagonalLeft: 'diagonalLeft',
+    diagonalRight: 'diagonalRight',
+    backDiagonalLeft: 'backDiagonalLeft',
+    backDiagonalRight: 'backDiagonalRight',
+    up: 'up',
+    back: 'back',
+    left: 'left',
+    right: 'right',
+}
 const pieces = {
     pawn: (a,b) => board[a + 1][b] == 'empty' ? 'can move' : 'cannot',
     knight: () => 'knightFun',
